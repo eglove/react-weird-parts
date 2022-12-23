@@ -1,0 +1,9 @@
+.TodoListContainer {
+    display: grid;
+    gap: 16px;
+    text-align: start;
+}
+
+.TodoListContainer div {
+    cursor: pointer;
+}
