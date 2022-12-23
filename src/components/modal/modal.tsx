@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useRef, useState} from "react";
 
 export function Modal(): JSX.Element {
     const buttonRef = useRef<HTMLButtonElement>(null);
@@ -10,21 +10,15 @@ export function Modal(): JSX.Element {
         })
     }
 
-    useEffect(() => {
-        const {current} = buttonRef;
+    // const {current} = buttonRef;
+    // if (current !== null) {
+    //     current.onclick = toggleOpen;
+    // }
 
-        if (current !== null) {
-            current.onclick = toggleOpen;
-        }
-    }, [buttonRef.current])
-
-    // useEffect(() => {
-    //     const button = document.querySelector('#buttonId') as HTMLButtonElement;
-    //
-    //     if (button !== null) {
-    //         button.onclick = toggleOpen;
-    //     }
-    // }, [])
+    const button = document.querySelector('#buttonId') as HTMLButtonElement;
+    if (button !== null) {
+        button.onclick = toggleOpen;
+    }
 
     return (
         <>

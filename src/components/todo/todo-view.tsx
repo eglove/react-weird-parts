@@ -12,7 +12,7 @@ type TodoViewProperties = {
 
 export const TodoView = ({handleAddTodo, handleTodoChange, handleFilterChange, todos}: TodoViewProperties): JSX.Element => {
     return (
-        <div style={centerAllTheThings}>
+        <div style={{...centerAllTheThings, width: '300px'}}>
             <p>My ToDo List</p>
             <form onSubmit={handleAddTodo}>
                 <label htmlFor="newTodo">ToDo</label>:{' '}

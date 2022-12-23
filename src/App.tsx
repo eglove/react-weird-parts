@@ -1,17 +1,20 @@
 import React, {CSSProperties} from 'react'
 import './App.css'
-import {Modal} from "./components/modal/modal";
+import {ReactRobot} from "./components/react-robot/react-robot";
+import {Todo} from "./components/todo/todo";
 
 export const centerAllTheThings: CSSProperties = {
     display: 'grid',
     placeItems: 'center',
 }
 
-function App() {
+function App(): JSX.Element {
+    const helloWorld = 'Hello, World!';
+
     return (
         <div style={centerAllTheThings}>
-            <p>Hello, World!</p>
-            <Modal />
+            <p>{helloWorld}</p>
+            <Todo />
         </div>
     )
 }

@@ -24,6 +24,10 @@ export function Todo(): JSX.Element {
         })
     }, []);
 
-    return <TodoView todos={todos} handleAddTodo={handleSubmit} handleTodoChange={handleTodoChange}
-                     handleFilterChange={handleFilterChange}/>
+    return <TodoView
+        todos={todos}
+        handleAddTodo={handleSubmit}
+        handleTodoChange={handleTodoChange}
+        handleFilterChange={handleFilterChange}
+    />
 }
